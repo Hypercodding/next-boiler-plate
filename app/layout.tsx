@@ -1,6 +1,13 @@
+import 'primereact/resources/themes/saga-blue/theme.css'; // Choose the theme you installed
+import 'primereact/resources/primereact.min.css'; // Core CSS
+import 'primeicons/primeicons.css'; // Icons
+import 'primeflex/primeflex.css'; // PrimeFlex (optional)
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ReactQueryProvider from "@/utils/ReactQueryProvider";
+import MegaMenuComponent from '@/components/mega.menu';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,10 +20,17 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) 
+
+{
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ReactQueryProvider>
+          <MegaMenuComponent />
+        {children}
+        </ReactQueryProvider>
+        </body>
     </html>
   );
 }
