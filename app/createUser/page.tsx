@@ -31,7 +31,6 @@ export default function CreateUser () {
     },
     onSubmit: (values) =>{
       addUser.mutate(values);
-      // queryClient.invalidateQueries('users');
       router.push('/users');
       console.log(values)
     }

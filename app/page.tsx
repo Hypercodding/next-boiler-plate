@@ -21,7 +21,7 @@ interface User {
   }
 
 const getUsers= () =>{
-    return axios.get("http://127.0.0.1:8000/users/")
+    return axios.get("http://192.168.4.164:8000/users/")
 }
 
 export default function Users(){
