@@ -12,17 +12,17 @@ const MegaMenuComponent = () => {
         {
             label: 'Users',
             icon: 'pi pi-fw pi-user',
-            command: () => { router.push('/users'); }
+            command: () => { router.push('/'); }
         },
         {
             label: 'Add User',
             icon: 'pi pi-user-plus',
-            command: () => { router.push('/users/createUser'); }
+            command: () => { router.push('/createUser'); }
         },
         {
             label: 'Assign Role',
             icon: 'pi pi-plus',
-            command: () => { router.push('/users/createRole'); }
+            command: () => { router.push('/createRole'); }
         }
     ];
 
